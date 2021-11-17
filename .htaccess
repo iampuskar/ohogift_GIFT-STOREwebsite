@@ -1,0 +1,14 @@
+Options -Indexes
+
+#Options +MultiViews
+#DefaultType application/x-httpd-php
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule (.*) $1.php [L]
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule (.*) $1.html [L]
+
+
+##ErrorDocument 403 "Boooo!!!! You do not ahve any permission"
+##Redirect http://pasale.com/ http://pasale.com/index.html
